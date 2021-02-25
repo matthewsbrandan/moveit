@@ -1,0 +1,23 @@
+@media(max-width: 720px){
+    body{
+        background-image: url('../assets/images/walppaper-mobile.png') !important;
+        background-size: cover;
+    }
+}
+
+body{
+    background: var(--background);
+    background-image: url('../assets/images/walppaper-desktop.png');
+    background-size: cover;
+    color: var(--text);
+}
+
+.Profile_profileContainer__3iYlY div strong{
+    color: var(--gray-line) !important;
+}
+.CompletedChallenges_completedChallengesContainer__T9k4b{
+    color: var(--gray-line) !important;
+}
+.Countdown_countdownContainer__3pqLs > span{
+    color: var(--gray-line) !important;
+}
