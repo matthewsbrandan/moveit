@@ -1,6 +1,6 @@
 # MOVE.IT
 
-Projeto baseado na ideia de Pomodoros. A cada 25 minutos te insentiva a fazer uma pausa e praticar algum tipo de exercício, aquecimento ou alongamento, para voltar com total foco após essa breve pausa. 
+Projeto baseado na ideia de Pomodoros. A cada 25 minutos te incentiva a fazer uma pausa e praticar algum tipo de exercício, aquecimento ou alongamento, para voltar com total foco após essa breve pausa. 
 
 ## NEXT.JS
 
@@ -31,11 +31,11 @@ yarn add typescript @types/react @types/react-dom @types/node -D
     - export default class MyDocument extends Document {
         - render(){
             - return(
-                - <Html>
-                    - <Head></Head>
-                    - <Main/> (Que chamará a aplicação)
-                    - <NextScript/> (Scripts do Next)
-                - </Html>
+                - < Html >
+                    - < Head ></ Head >
+                    - < Main /> (Que chamará a aplicação)
+                    - < NextScript /> (Scripts do Next)
+                - </ Html >
     - ... fechamentos de () e {}
 - O arquivo _document é executado apenas uma vez, por isso vale apena utilizá-lo para carregamento de componentes que serão estáticos na página. Apesar do _app ser reaproveitado, ele é recalculado para ver se houve alteração, ou seja, gera um processamento a mais.
 
@@ -52,7 +52,7 @@ yarn add typescript @types/react @types/react-dom @types/node -D
     - import { createContext } from 'react';
     - export const ChallengesContext = createContext({});
 - Sua utilização é igual á um componente normal, para incluir seus componentes neste contexto, basta envolver os outros componentes com a sua tag utilizando '.provider'.
-    - <ChallengesContext.Provider> ...demais componentes... </ChallengesContext.Provider>
+    - < ChallengesContext.Provider > ...demais componentes... </ ChallengesContext.Provider >
 - Para pegar os dados usamos a função useContext() importado do react:
     - import {useContext} from 'react';
     - const contextData = useContext(ChallengesContext);
@@ -61,5 +61,3 @@ yarn add typescript @types/react @types/react-dom @types/node -D
 
 - JS: função padStart -> caso a String não tenha a quantidade de caracteres informadas no primeiro parametro, prenchera com o que está no segundo parametro, incluindo o novo caracter no inicio. Exemplo:
     - ('25').padStart(2,'0') == '25' | ('5').padStart(2,'0') == '05'
-
-#jornadainfinita
