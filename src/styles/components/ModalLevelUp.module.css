@@ -1,0 +1,91 @@
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(250,250,250,.4);
+    backdrop-filter: blur(2px);
+
+    z-index: 9999;
+}
+.modalContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+.modalBody{
+    min-width: 20rem;
+    padding: .5rem 1rem 1rem;
+
+    border-radius: 5px;
+    background: var(--white);
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modalBody .containerBtnCloseModal{
+    width: 100%;
+}
+.modalBody .btnCloseModal{
+    float: right;
+    cursor: pointer;
+
+    transition: color .6s;
+}
+.modalBody .btnCloseModal:hover{
+    color: var(--red);
+}
+.modalBody .congratulationContainer {
+    position: relative;
+    padding: 1rem 2rem 0;
+    /* background: black; */
+}
+.modalBody .congratulationContainer h1{
+    position: relative;
+    color: var(--blue);
+
+    text-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    
+    font-size: 6.6rem;
+}
+.modalBody .congratulationContainer img{
+    position: absolute;
+    transform: translateX(-31%) translateY(20%);
+}
+.modalBody strong{
+    font-size: 1.3rem;
+    color: var(--title);
+
+}
+.modalBody p{
+    font-size: .9rem;
+    font-weight: 300;
+
+    margin-bottom: 1.5rem;
+}
+.modalBody button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 1rem;
+    padding: .6rem 1.2rem;
+    font-weight: 300;
+    font-size: .8rem;
+
+    border: 0;
+    border-radius: 5px;
+    color: var(--white);
+    background: var(--blue-twitter);
+}
+.modalBody button img{
+    margin-left: 5px;
+}
