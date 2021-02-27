@@ -2,6 +2,8 @@
 
 Projeto baseado na ideia de Pomodoros. A cada 25 minutos te incentiva a fazer uma pausa e praticar algum tipo de exercício, aquecimento ou alongamento, para voltar com total foco após essa breve pausa. 
 
+[APP](https://moveit-matthewsbrandan.vercel.app/)
+
 ## NEXT.JS
 
 Ele é considerado um framework encima do React.
@@ -57,7 +59,39 @@ yarn add typescript @types/react @types/react-dom @types/node -D
     - import {useContext} from 'react';
     - const contextData = useContext(ChallengesContext);
 
-### NOVOS CONCEITOS | FUNÇÕES | CÓDIGOS
+### COOKIE
+- Para utilizá-lo temos uma biblioteca chamada js-cookie. Execute os comandos a seguir para importá-la ao seu projeto:
+    - yarn add js-cookie
+    - yarn add @types/js-cookie -D
 
-- JS: função padStart -> caso a String não tenha a quantidade de caracteres informadas no primeiro parametro, prenchera com o que está no segundo parametro, incluindo o novo caracter no inicio. Exemplo:
-    - ('25').padStart(2,'0') == '25' | ('5').padStart(2,'0') == '05'
+- *LocalStorage*: Só tem como armazenar dados com chave e valor, não é possível armazenar objetos, a não ser que sejam convertidos em texto.
+- *SessionStorage*: É semelhante ao LocalStorage, porém ele é perdido na seção, com um Session PHP.
+- *IndexedDB*: É um banco de dados mais completo.
+- *WebSQL*: É semelhante ao SQLite, porém não são todos os browsers que tem suporte para ele. 
+- *Cookie*: É semelhante ao LocalStorage, porém temos algumas funções a mais.
+    - Conseguimos usar ele em mais de um dominio
+    - Conseguimos dizer data de expiração
+    - Conseguimos definir se ele pode ser acessado só pelo backend(Na camada HTTP), ou se o front também tem acesso
+    - Conseguimos fazê-lo funcionar apenas se o site tiver SSL
+
+### getServerSideProps
+- Essa função executa o Next na camada backend, é ideal para fazer requisições a APIs, ou outros serviços, quando você deseja que as informações sejam carregadas antes da aplicação carregar no Browser. Isso é fundamental para que buscadores vejam seu conteúdo(SEO), porque eles não costumam esperar a resposta de requisições frontend.
+- Essa função só pode ser aplicada em páginas, não componentes, pois os componentes são executados na camada front.
+
+### DEPLOY
+- *Netlify* | *Vercel*
+
+#### FEATURES
+- Melhorar a Documentação (Como rodar na máquina, Print de Telas e Lista de Funcionalidades)
+- Configurar vercel para fazer o deploy junto com o push do github: https://vercel.com/docs/git
+- Fazer a versão 2.0 do figma
+- Logar com github: pesquisar oauth github
+- Pesquisar sobre 'Serverless com React.js e Next.js na Vercel'(RocketSeat)
+- Fazer funcionalidade de postar no twitter
+- Fazer rancking
+- Gerar um PWA
+
+#### BUGS
+- Erro inesperado na versão mobile
+
+#missioncomplete

@@ -5,11 +5,11 @@ import styles from '../styles/components/Countdown.module.css';
 let countdownTimeout : NodeJS.Timeout;
 
 export function Countdown(){
-    const { startNewChallenge, activeChallenge } = useContext(ChallengesContext);
+    const timeUsed = 25;
 
-    const [time,setTime] = useState(25 * 60);
+    const { startNewChallenge, activeChallenge } = useContext(ChallengesContext);
+    const [time,setTime] = useState(timeUsed * 60);
     const [isActive,setIsActive] = useState(false);
-    const [hasFinished,setHasFinished] = useState(false);
 
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
@@ -23,7 +23,7 @@ export function Countdown(){
     function resetCountdown(){
         clearTimeout(countdownTimeout);
         setIsActive(false);
-        setTime(25 * 60);
+        setTime(timeUsed * 60);
     }
 
     useEffect(() => {
@@ -34,7 +34,6 @@ export function Countdown(){
         }else
         if(isActive && time == 0){
             setIsActive(false);
-            setHasFinished(true);
             startNewChallenge();
         }
 
